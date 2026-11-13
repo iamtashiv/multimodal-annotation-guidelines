@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "workflow": "Temporal Action & Object Manipulation Annotation",
+  "qc_checkpoints": [
+    {
+      "step": 1,
+      "check": "Temporal Boundary Precision",
+      "criteria": "Start and end timestamps align within ±100ms of physical contact initiation and release."
+    },
+    {
+      "step": 2,
+      "check": "Occlusion & Tracking Continuity",
+      "criteria": "Object IDs remain persistent across partial occlusions without ID switching."
+    },
+    {
+      "step": 3,
+      "check": "Action Verb Granularity",
+      "criteria": "Action labels use atomic, unambiguous verbs (e.g., 'grasp_handle', 'pour_liquid') rather than broad summaries."
+    }
+  ]
+}
